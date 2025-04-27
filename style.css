@@ -1,0 +1,190 @@
+/* Professional styles for the portfolio website */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-light: #f8f9fa;
+    --background-dark: #343a40;
+    --text-light: #ffffff;
+    --text-dark: #212529;
+    --font-primary: 'Arial', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+main {
+    padding: 6rem 2rem 2rem 2rem; /* Adjust top padding for fixed header */
+}
+
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h1, section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+#home {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--text-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact ul li {
+    margin-bottom: 1rem;
+}
+
+#contact ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
